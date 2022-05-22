@@ -1,0 +1,31 @@
+557a558,561
+>   set axisten_if_enable_rx_msg_intfc [ipgui::add_param $IPINST -parent $panelFreg -name axisten_if_enable_rx_msg_intfc -widget checkBox]
+>   set_property display_name "Enable RX Message INTFC" $axisten_if_enable_rx_msg_intfc
+>   ipgui::add_row $IPINST -parent $Page1
+> 
+15415c15419
+<           if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}]} {
+---
+>           if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Downstream"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Upstream"}]} {
+15438c15442
+<             if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}]} {
+---
+>             if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Downstream"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Upstream"}]} {
+15461c15465
+<             if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}]} {
+---
+>             if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Downstream"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Upstream"}]} {
+15482c15486
+<         if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}]} {
+---
+>         if {[expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Root_Port_of_PCI_Express_Root_Complex"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Downstream"}] || [expr {[get_property value ${PARAM_VALUE.device_port_type}  ] eq "Switch_Port_Upstream"}]} {
+15799a15804,15812
+> }
+> 
+> proc update_MODELPARAM_VALUE.AXISTEN_IF_ENABLE_RX_MSG_INTFC {MODELPARAM_VALUE.AXISTEN_IF_ENABLE_RX_MSG_INTFC PARAM_VALUE.axisten_if_enable_rx_msg_intfc} {
+>   if { [get_property value ${PARAM_VALUE.axisten_if_enable_rx_msg_intfc}] } {
+>     set val "TRUE"
+>   } else {
+>     set val "FALSE"
+>   }
+>   set_property value $val ${MODELPARAM_VALUE.AXISTEN_IF_ENABLE_RX_MSG_INTFC}

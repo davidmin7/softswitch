@@ -1,0 +1,10 @@
+14272a14273,14276
+>       <spirit:modelParameter spirit:dataType="string">
+>         <spirit:name>AXISTEN_IF_ENABLE_RX_MSG_INTFC</spirit:name>
+>         <spirit:value spirit:resolve="generated" spirit:id="MODELPARAM_VALUE.AXISTEN_IF_ENABLE_RX_MSG_INTFC">TRUE</spirit:value>
+>       </spirit:modelParameter>
+21343a21348,21351
+>     </spirit:parameter>
+>     <spirit:parameter>
+>       <spirit:name>axisten_if_enable_rx_msg_intfc</spirit:name>
+>       <spirit:value spirit:format="bool" spirit:resolve="user" spirit:id="PARAM_VALUE.axisten_if_enable_rx_msg_intfc" spirit:order="456.1">false</spirit:value>
